@@ -7,9 +7,9 @@ Available sorting algorithms:
 - Selection sort
 - Insertion sort
 
-Detailed description and the comparision of their compplexities can be found in the following wiki:\
+Detailed description and the comparision of their compplexities can be found in the following wiki:
 
-https://en.wikipedia.org/wiki/Sorting_algorithm\
+https://en.wikipedia.org/wiki/Sorting_algorithm
 
 
 
