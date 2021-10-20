@@ -1,6 +1,6 @@
 A list of simple implementations of sorting algorithms.\
 All sorting functions are inside sort.py.\
-Available sorting algorithms:\
+Available sorting algorithms:
 - Bubble sort
 - Quick sort
 - Merge sort
