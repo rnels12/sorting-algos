@@ -11,8 +11,8 @@ a list of simple implementations of sorting algorithms
 """
 
 def Bubble(A):
-    if not A or len(A) == 1 : return A
     nn = len(A)
+    if len(A) < 2 : return A
     for i in range(nn - 1):
         swap = False
         for j in range( nn - 1 - i):
@@ -25,10 +25,9 @@ def Bubble(A):
 
 
 def Quick(A):
-    if not A or len(A) == 1 : return A
     nn = len(A)
-    p = nn - 1
-    s = 0
+    if len(A) < 2 : return A
+    p, s = nn - 1, 0
     while s < p:
         if A[s] > A[p]:
             A[s], A[p-1] = A[p-1], A[s]
@@ -39,11 +38,10 @@ def Quick(A):
     return Quick(A[:p]) + [A[p]] + Quick(A[p+1:])
 
 def Merge(A):
-    if not A or len(A) == 1 : return A
-    nn  = len(A)
+    nn = len(A)
+    if len(A) < 2 : return A
     mid = nn // 2
-    L = Merge(A[0:mid])
-    R = Merge(A[mid:])
+    L, R = Merge(A[:mid]), Merge(A[mid:])
     ll, lr = len(L), len(R)
 
     B = []
@@ -62,23 +60,22 @@ def Merge(A):
     return B
     
 def Selection(A):
-    if not A or len(A) == 1 : return A
     nn = len(A)
+    if len(A) < 2 : return A
     for i in range(nn):
         imin = i
         cmin = A[imin]
         for j in range(i,nn):
             if A[j] < cmin:
-                cmin = A[j]
-                imin = j
+                cmin, imin = A[j], j
 
         if i != imin: A[i], A[imin] = A[imin], A[i]
 
     return A
 
 def Insertion(A):
-    if not A or len(A) == 1 : return A
     nn = len(A)
+    if len(A) < 2 : return A
     for i in range(1,nn):
         j = i - 1
         while j >= 0 and A[i] < A[j]: j -= 1
@@ -86,4 +83,3 @@ def Insertion(A):
         
     return A
 
-    

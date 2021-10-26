@@ -16,16 +16,20 @@ import random
 import sort
 
 if __name__ == "__main__":
-    nn = 10
+    nn = 15
     random.seed()
     A = random.sample( range(0, nn*5),  nn)
     
-    print("Before:", A)
-    # A = sort.Bubble(A)    
-    # A = sort.Quick(A)
-    # A = sort.Merge(A)
-    # A = sort.Selection(A)
-    A = sort.Insertion(A)
+    print("Unsorted:", A)
+    B = sort.Bubble(A)    
+    # C = sort.Quick(A)
+    # D = sort.Merge(A)
+    # E = sort.Selection(A)
+    # F = sort.Insertion(A)
 
-    print("After:", A)
+    print("Sorted:", B)
+    # print("Sorted:", C)
+    # print("Sorted:", D)
+    # print("Sorted:", E)
+    # print("Sorted:", F)
 
